@@ -96,6 +96,6 @@ html = """<!DOCTYPE html>
 </body>
 </html>"""
 
-pagina = open('./generador.html', 'w')
+pagina = open("""./index.html""", 'w')
 pagina.write(html)
 pagina.close
