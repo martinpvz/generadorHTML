@@ -16,7 +16,7 @@ descO.close()
 # print(descR)
 # print(campoR)
 
-#Obteniendo path de imagen
+#Obteniendo path de imagenes con diferentes extensiones
 path = glob.glob('*.jpg', recursive = False)
 path += glob.glob('*.png', recursive = False)
 path += glob.glob('*.gif', recursive = False)
