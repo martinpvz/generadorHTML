@@ -1,4 +1,5 @@
-import os
+# LIBRERIA GLOB: encuentra todos los nombres de ruta que 
+#coinciden con un patrón específico de acuerdo con las reglas
 import glob
 #leer archivos 
 titleO = open("titulo.txt", "r")
@@ -17,11 +18,12 @@ descO.close()
 # print(campoR)
 
 #Obteniendo path de imagenes con diferentes extensiones
-path = glob.glob('*.jpg', recursive = False)
-path += glob.glob('*.png', recursive = False)
-path += glob.glob('*.gif', recursive = False)
-path += glob.glob('*.webp', recursive = False)
-path += glob.glob('*.jfif', recursive = False)
+path = glob.glob('*.jpg')
+path += glob.glob('*.png')
+path += glob.glob('*.gif')
+path += glob.glob('*.webp')
+path += glob.glob('*.jfif')
+path += glob.glob('*.jpeg')
 
 imagenes = ''
 divImagenes = ''
@@ -30,14 +32,11 @@ for nombre in path:
     slide= slide +1
     imagenes += """<img src=\""""+nombre+"""\" alt="imagen"""+str(slide)+"""\" onclick="openModal();currentSlide("""+str(slide)+""")">
                 """
-    divImagenes += """<div class="mySlides">
-                        <div class="numbertext"></div>
+    divImagenes += """<div class="mySlides">                        
                         <img src=\""""+nombre+"""\" style="width:100%">
                     </div>"""      
 
-#print(imagenes)
-#print(divImagenes)
-#Generando HTML
+
 html = """<!DOCTYPE html>
 <html lang="es">
 <head>
